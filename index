@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Code - Digital Analytics</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --brand-green: #00FF90;
+            --dark-bg: #000000;
+            --purple: #431E41;
+
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(to right, var(--dark-bg), var(--purple));
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        .btn-brand {
+            background-color: var(--brand-green);
+        }
+        .btn-brand:hover {
+            opacity: 0.9;
+        }
+        .text-brand {
+            color: var(--brand-green);
+        }
+        .border-brand {
+            border-color: var(--brand-green);
+        }
+        .hover-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 255, 144, 0.1), 0 4px 6px -2px rgba(0, 255, 144, 0.05);
+        }
+        .bg-dark {
+            background: linear-gradient(to right, var(--dark-bg), var(--purple));
+        }
+        .bg-black {
+            background: linear-gradient(to right, var(--dark-bg), var(--purple));
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen">
+        <!-- Hero Section -->
+        <header class="hero-gradient text-white">
+            <nav class="container mx-auto p-6 flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Tracking Code</h1>
+                <a href="https://www.linkedin.com/company/tracking-code" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 px-4 py-2 btn-brand text-black rounded-lg hover:opacity-90 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    LinkedIn
+                </a>
+            </nav>
+            <div class="container mx-auto px-6 py-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Transformando Dados em Decisões Inteligentes
+                </h2>
+                <p class="text-xl mb-8 max-w-2xl">
+                    Consultoria especializada em Digital Analytics, focada em soluções técnicas
+                    avançadas e treinamentos em GTM, GA4 e Looker Studio.
+                </p>
+                <a href="https://wa.me/5511958342100?text="
+                    class="inline-flex items-center gap-2 btn-brand text-black px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all">
+                    Fale Conosco
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </header>
+
+        <!-- Serviços -->
+        <section class="py-20 bg-dark text-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-brand">Nossos Serviços</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 border border-brand rounded-lg hover-shadow transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="#00FF90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="mb-4">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-3 text-brand">GTM & GA4</h3>
+                        <p class="text-gray-300">
+                            Implementação e configuração profissional para rastreamento preciso de dados,
+                            garantindo insights valiosos para seu negócio.
+                        </p>
+                    </div>
+                    <div class="p-6 border border-brand rounded-lg hover-shadow transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="#00FF90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="mb-4">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-3 text-brand">Looker Studio</h3>
+                        <p class="text-gray-300">
+                            Criação de dashboards personalizados e relatórios interativos para
+                            visualização eficiente de dados e tomada de decisão.
+                        </p>
+                    </div>
+                    <div class="p-6 border border-brand rounded-lg hover-shadow transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="#00FF90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="mb-4">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-3 text-brand">Treinamentos</h3>
+                        <p class="text-gray-300">
+                            Capacitação completa em ferramentas de análise de dados para
+                            equipes e profissionais, com foco em resultados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre nós -->
+        <section class="py-20 bg-dark text-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold mb-6 text-brand">Sobre a Tracking Code</h2>
+                    <p class="text-gray-300 mb-4">
+                        Somos uma consultoria especializada em Digital Analytics, focada em transformar
+                        dados em decisões inteligentes. Atuamos em diversos segmentos, incluindo
+                        e-commerce e estratégias de tráfego pago e orgânico.
+                    </p>
+                    <p class="text-gray-300">
+                        Combinamos expertise técnica e educacional para otimizar a coleta e análise
+                        de dados, enquanto capacitamos equipes e profissionais com o conhecimento
+                        necessário para aplicarem essas práticas de forma eficiente.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="py-20 bg-dark text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-8 text-brand">Transforme Dados em Insights!</h2>
+                <p class="text-gray-300 mb-8">
+                    Entre em contato conosco e descubra como podemos ajudar sua empresa
+                    a tomar melhores decisões baseadas em dados.
+                </p>
+                <a href="https://wa.me/5511958342100?text="
+                    class="inline-flex items-center gap-2 btn-brand text-black px-8 py-3 rounded-lg font-semibold transition-all">
+                    Iniciar Conversa
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black text-white py-8">
+            <div class="container mx-auto px-6 text-center">
+                <p>© <span id="year"></span> Tracking Code. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
