@@ -3,15 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5VGSDR6HD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-C5VGSDR6HD');
-</script>
     <title>Tracking Code - Digital Analytics</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
@@ -39,7 +30,15 @@
         }
         .border-brand {
             border-color: var(--brand-green);
+            transform: translateY(0);
+            transition: all 0.3s ease;
         }
+
+        .border-brand:hover {
+               transform: translateY(-10px); /* Move o elemento para cima ao passar o mouse */
+               border-color: rgba(0, 255, 144, 0.8); /* Altera a cor da borda */
+        }
+
         .hover-shadow:hover {
             box-shadow: 0 10px 15px -3px rgba(0, 255, 144, 0.1), 0 4px 6px -2px rgba(0, 255, 144, 0.05);
         }
@@ -48,6 +47,70 @@
         }
         .bg-black {
             background: linear-gradient(to right, var(--dark-bg), var(--purple));
+        }
+
+        .team-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to right, var(--dark-bg), var(--purple));
+            color: var(--brand-green);
+        }
+        .team-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .team-card {
+            background: linear-gradient(to right, var(--dark-bg), var(--purple));
+            border: 1px solid var(--brand-green);
+            border-radius: 10px;
+            box-shadow: 0 10px 15px -3px rgba(0, 255, 144, 0.1), 0 4px 6px -2px rgba(0, 255, 144, 0.05);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px -5px rgba(0, 255, 144, 0.2), 0 10px 10px -5px rgba(0, 255, 144, 0.1);
+        }
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid var(--brand-green);
+        }
+        .team-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--brand-green);
+            margin-bottom: 10px;
+        }
+        .team-description {
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .linkedin-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #000;
+            background-color: var(--brand-green);
+            border-radius: 5px;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        .linkedin-button:hover {
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -92,7 +155,7 @@
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12 text-brand">Nossos Serviços</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="p-6 border border-brand rounded-lg hover-shadow transition-all">
+                    <div class="p-6 border border-brand border-brand:hover rounded-lg hover-shadow transition-all">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
                             stroke="#00FF90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="mb-4">
@@ -157,6 +220,46 @@
             </div>
         </section>
 
+        <section class="team-section">
+            <h2 class="text-brand">Equipe Tracking Code</h2>
+            <div class="team-container">
+                <!-- Card Pessoa 1 -->
+                <div class="team-card hover-shadow">
+                    <div class="profile-pic">
+                        <img src="SANA.jpg" alt="Foto de Pessoa 1" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <div class="team-name">Sana Hachem</div>
+                    <div class="team-description">
+                        <p>Analista de Dados especialista em Data Viz e desesenvolvimento de Dashboards em Looker studio.Gosta da natureza, cachoeiras e trilhas</p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/sana-hachem-87b89b1b3/" target="_blank" class="linkedin-button transition-all">LinkedIn</a>
+                </div>
+                <!-- Card Pessoa 2 -->
+                <div class="team-card hover-shadow">
+                    <div class="profile-pic">
+                        <img src="flávio.jpg" alt="Foto de Pessoa 2" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <div class="team-name">Flávio Sipoli</div>
+                    <div class="team-description">
+                        <p>Graduado em Sistemas para Internet, especialista em GA4, ecommerce e desenvolvimento de sites. Gosta de correr e é fã de NBA.</p>
+                     </div>
+                    <a href="https://www.linkedin.com/in/flavio-sipoli/" target="_blank" class="linkedin-button transition-all">LinkedIn</a>
+                </div>
+                <!-- Card Pessoa 3 -->
+                <div class="team-card hover-shadow">
+                    <div class="profile-pic">
+                        <img src="danilo.jpg" alt="Foto de Pessoa 3" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <div class="team-name">Danilo Oliveira</div>
+                    <div class="team-description">
+                        <p>Pós gradudo em ciência de dados é especialista em traqueamento, dataLayer, GTM e desenvolvimento de sites. Gosta de maratonar séries e filmes.
+                        </p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/danilosoliveira/" target="_blank" class="linkedin-button transition-all">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
         <!-- Contato -->
         <section id="contato" class="py-20 bg-dark text-white">
             <div class="container mx-auto px-6 text-center">
@@ -184,7 +287,7 @@
         </footer>
     </div>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="https://wa.me/5511958342100?text=" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
+    <a href="https://wa.me/5511958342100?text=Adorei%20seu%20artigo" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
       z-index:1000;" target="_blank">
     <i style="margin-top:16px" class="fa fa-whatsapp"></i>
     </a>
