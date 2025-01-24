@@ -5,389 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tracking Code - Digital Analytics</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-        <script>
-document.getElementById('menu-btn').addEventListener('click', function () {
-    const menu = document.getElementById('menu');
-    if (menu.style.display === 'flex') {
-        menu.style.display = 'none'; // Oculta o menu
-    } else {
-        menu.style.display = 'flex'; // Exibe o menu
-    }
-});
-    </script>
     <style>
         :root {
             --brand-green: #00FF90;
             --dark-bg: #000000;
             --purple: #431E41;
-
         }
-        
         .hero-gradient {
             background: linear-gradient(to right, var(--dark-bg), var(--purple));
         }
-        .transition-all {
-            transition: all 0.3s ease;
-        }
-        .btn-brand {
-            background-color: var(--brand-green);
-        }
-        .btn-brand:hover {
-            opacity: 0.9;
-        }
-        .text-brand {
-            color: var(--brand-green);
-        }
-        .border-brand {
-            border-color: var(--brand-green);
-            transform: translateY(0);
-            transition: all 0.3s ease;
-        }
-
-        .border-brand:hover {
-               transform: translateY(-10px); /* Move o elemento para cima ao passar o mouse */
-               border-color: rgba(0, 255, 144, 0.8); /* Altera a cor da borda */
-        }
-
-        .hover-shadow:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 255, 144, 0.1), 0 4px 6px -2px rgba(0, 255, 144, 0.05);
-        }
-        .bg-dark {
-            background: linear-gradient(to right, var(--dark-bg), var(--purple));
-        }
-        .bg-black {
-            background: linear-gradient(to right, var(--dark-bg), var(--purple));
-        }
-
-        .team-section {
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(to right, var(--dark-bg), var(--purple));
-            color: var(--brand-green);
-        }
-        .team-section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        .team-container {
+        nav {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .team-card {
-            background: linear-gradient(to right, var(--dark-bg), var(--purple));
-            border: 1px solid var(--brand-green);
-            border-radius: 10px;
-            box-shadow: 0 10px 15px -3px rgba(0, 255, 144, 0.1), 0 4px 6px -2px rgba(0, 255, 144, 0.05);
-            width: 300px;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
+            background-color: #fff;
         }
-        .team-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 25px -5px rgba(0, 255, 144, 0.2), 0 10px 10px -5px rgba(0, 255, 144, 0.1);
-        }
-        .profile-pic {
-            width: 120px;
-            height: 120px;
+        nav img {
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            margin: 0 auto 20px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 2px solid var(--brand-green);
         }
-        .team-name {
-            font-size: 22px;
-            font-weight: bold;
-            color: var(--brand-green);
-            margin-bottom: 10px;
+        #menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
-        .team-description {
-            font-size: 16px;
-            color: #ffffff;
-            margin-bottom: 20px;
+        #menu li {
+            margin-right: 20px;
         }
-        .linkedin-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #000;
-            background-color: var(--brand-green);
-            border-radius: 5px;
+        #menu li a {
             text-decoration: none;
-            transition: opacity 0.3s ease;
+            color: var(--brand-green);
+            font-weight: bold;
+            font-size: 20px;
         }
-        .linkedin-button:hover {
-            opacity: 0.9;
+        #menu-btn {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
         }
-#menu-btn {
-    display: none; /* Oculta o botão do menu hambúrguer no desktop */
-}
-
-#menu {
-    display: flex; /* Exibe o menu horizontalmente no desktop */
-}
-        
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Organiza os itens verticalmente no mobile */
-        align-items: flex-start; /* Alinha o conteúdo à esquerda */
-    }
-
-    /* Redimensiona o logo no mobile */
-    nav > div {
-        width: 100px;
-        height: 100px;
-    }
-
-    /* Exibe o botão do menu hambúrguer no mobile */
-    #menu-btn {
-        display: block;
-    }
-
-    /* Oculta o menu inicialmente no mobile */
-    #menu {
-        display: none; /* Oculta o menu por padrão */
-        flex-direction: column; /* Itens empilhados no mobile */
-        width: 100%; /* O menu ocupa a largura completa */
-        background-color: white; /* Fundo para contraste */
-        position: absolute; /* Fica sobreposto ao conteúdo */
-        top: 120px; /* Alinha abaixo do logo */
-        left: 0;
-        padding: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Estilo dos itens do menu no mobile */
-    #menu li {
-        margin: 10px 0; /* Espaçamento entre itens no menu vertical */
-    }
-}
-
+        @media (max-width: 768px) {
+            #menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 100px;
+                left: 0;
+                background-color: white;
+                padding: 10px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            #menu li {
+                margin: 10px 0;
+            }
+            #menu-btn {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="min-h-screen">
-        <!-- Hero Section -->
-        <header class="hero-gradient text-white">
-            <nav class="bg-black" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #fff; margin-right: 30px; padding-right: 30px; position: relative;">
-                <!-- Logo -->
-                <div style="width: 200px; height: 200px; overflow: hidden; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
-                    <img src="tracking_code_logo.png" alt="Logo Tracking Code" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                </div>
-            
-                <!-- Botão do menu hambúrguer (aparece no mobile) -->
-                <button id="menu-btn" style="display: none; background: none; border: none; cursor: pointer; font-size: 24px;">
-                    &#9776;
-                </button>
-            
-                <!-- Menu de Navegação -->
-                <ul id="menu" style="display: flex; list-style: none; margin: 0; padding: 0; margin-left: auto;">
-                    <li style="margin-right: 20px;"><a href="#contato" style="text-decoration: none; color: var(--brand-green); font-weight: bold; font-size: 20px;">Contato</a></li>
-                    <li style="margin-right: 20px;"><a href="#sobre-nos" style="text-decoration: none; color: var(--brand-green); font-weight: bold; font-size: 20px;">Sobre Nós</a></li>
-                    <li style="margin-right: 20px;"><a href="#equipe" style="text-decoration: none; color: var(--brand-green); font-weight: bold;font-size: 20px;">Equipe</a></li>
-                    <li><a href="#blog" style="text-decoration: none; color: var(--brand-green); font-weight: bold;font-size: 20px;">Blog</a></li>
-                </ul>
-            </nav>
-            <div class="container mx-auto px-6 py-20">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                    Transformando Dados em Decisões Inteligentes
-                </h2>
-                <p class="text-xl mb-8 max-w-2xl">
-Precisa otimizar seus dados e escalar seus resultados? Somos especialistas em Digital Analytics, prontos para transformar desafios em soluções!
-                </p>
-                <a href="https://wa.me/5511958342100?text="
-                    class="inline-flex items-center gap-2 btn-brand text-black px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all">
-                    Fale Conosco
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </a>
+    <header class="hero-gradient text-white">
+        <nav>
+            <div>
+                <img src="tracking_code_logo.png" alt="Logo Tracking Code">
             </div>
-        </header>
-
-        <!-- Serviços -->
-        <section class="py-20 bg-dark text-white">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12 text-brand">Nossos Serviços</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="p-6 border border-brand border-brand:hover rounded-lg hover-shadow transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                            stroke="#00FF90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="mb-4">
-                            <line x1="18" y1="20" x2="18" y2="10"></line>
-                            <line x1="12" y1="20" x2="12" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="14"></line>
-                        </svg>
-                        <h3 class="text-xl font-semibold mb-3 text-brand">Web Analytics e Tagueamento</h3>
-                        <p class="text-gray-300">
-                        Seus dados na sua ferramenta de web analytics, como GA4, não fazem sentido? 
-                        Precisa estruturar um novo tagueamento com GTM e dataLayer? 
-                        Nós resolvemos o seu problema! Ter dados estruturados com soluções avançadas é uma vantagem competitiva. 
-                        Realizamos o tagueamento completo do seu website e aplicativo, garantindo precisão e eficiência.
-                        </p>
-                    </div>
-                    <div class="p-6 border border-brand rounded-lg hover-shadow transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                            stroke="#00FF90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="mb-4">
-                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                        </svg>
-                        <h3 class="text-xl font-semibold mb-3 text-brand">Looker Studio</h3>
-                        <p class="text-gray-300">
-                         Criação de dashboards personalizados e relatórios interativos que transformam dados em insights, facilitando a visualização eficiente e a tomada de decisões estratégicas.
-                        </p>
-                    </div>
-<div class="p-6 border border-brand rounded-lg hover-shadow transition-all">
-    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-        stroke="#00FF90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        class="mb-4">
-        <polyline points="6 12 10 16 18 8"></polyline>
-        <circle cx="12" cy="12" r="10"></circle>
-    </svg>
-    <h3 class="text-xl font-semibold mb-3 text-brand">Business Intelligence e CRO</h3>
-    <p class="text-gray-300">
-        Transformamos dados em inteligência estratégica, gerando insights relevantes que impulsionam o crescimento do seu negócio e otimizam suas taxas de conversão.
-    </p>
-</div>
-<div class="p-6 border border-brand rounded-lg hover-shadow transition-all">
-    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-        stroke="#00FF90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        class="mb-4">
-        <polyline points="4 6 9 11 4 16"></polyline>
-        <polyline points="20 6 15 11 20 16"></polyline>
-    </svg>
-    <h3 class="text-xl font-semibold mb-3 text-brand">Desenvolvimento</h3>
-    <p class="text-gray-300">
-Desenvolvimento de plataformas web, como sites e landing pages, além da criação de soluções personalizadas que integram dados de forma eficaz, permitindo uma gestão e análise completos em toda a estrutura digital.    </p>
-</div>
-
-<div class="p-6 border border-brand rounded-lg hover-shadow transition-all">
-    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-        stroke="#00FF90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        class="mb-4">
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="16" y1="16" x2="21" y2="21"></line>
-    </svg>
-    <h3 class="text-xl font-semibold mb-3 text-brand">Análise de Dados e Campanhas de Mídia Paga e Orgânica</h3>
-    <p class="text-gray-300">
-Precisa revisar os dados que está recebendo ou criar novas campanhas? Acha que as informações estão inconsistentes ou que o orçamento de mídia está mal direcionado? Realizamos auditorias completas dos seus dados digitais e a criação de campanhas pagas e orgânicas otimizadas.    </p>
-</div>
-
-
-                    <div class="p-6 border border-brand rounded-lg hover-shadow transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                            stroke="#00FF90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="mb-4">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                        </svg>
-                        <h3 class="text-xl font-semibold mb-3 text-brand">Treinamentos</h3>
-                        <p class="text-gray-300">
-                            Capacitação completa em ferramentas de análise de dados para
-                            equipes e profissionais, com foco em resultados.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sobre nós -->
-        <section class="py-20 bg-dark text-white">
-            <div class="container mx-auto px-6">
-                <div class="max-w-3xl mx-auto text-center">
-                    <h2 class="text-3xl font-bold mb-6 text-brand">Sobre a Tracking Code</h2>
-                    <p class="text-gray-300 mb-4">
-                        Somos uma consultoria especializada em Digital Analytics, focada em transformar
-                        dados em decisões inteligentes. Atuamos em diversos segmentos, incluindo
-                        e-commerce e estratégias de tráfego pago e orgânico.
-                    </p>
-                    <p class="text-gray-300">
-                        Combinamos expertise técnica e educacional para otimizar a coleta e análise
-                        de dados, enquanto capacitamos equipes e profissionais com o conhecimento
-                        necessário para aplicarem essas práticas de forma eficiente.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="team-section">
-            <h2 class="text-brand">Equipe Tracking Code</h2>
-            <div class="team-container">
-                <!-- Card Pessoa 1 -->
-                <div class="team-card hover-shadow">
-                    <div class="profile-pic">
-                        <img src="SANA.jpg" alt="Foto de Pessoa 1" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <div class="team-name">Sana Hachem</div>
-                    <div class="team-description">
-                        <p>Analista de Dados especialista em Data Viz e desesenvolvimento de Dashboards em Looker studio.Gosta da natureza, cachoeiras e trilhas.</p>
-                    </div>
-                    <a href="https://www.linkedin.com/in/sana-hachem-87b89b1b3/" target="_blank" class="linkedin-button transition-all">LinkedIn</a>
-                </div>
-                <!-- Card Pessoa 2 -->
-                <div class="team-card hover-shadow">
-                    <div class="profile-pic">
-                        <img src="flávio.jpg" alt="Foto de Pessoa 2" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <div class="team-name">Flávio Sipoli</div>
-                    <div class="team-description">
-                        <p>Graduado em Sistemas para Internet, especialista em GA4, Ecommerce, Mídia Paga, SEO e Desenvolvimento de Sites. Gosta de correr e é fã de NBA.</p>
-                     </div>
-                    <a href="https://www.linkedin.com/in/flavio-sipoli/" target="_blank" class="linkedin-button transition-all">LinkedIn</a>
-                </div>
-                <!-- Card Pessoa 3 -->
-                <div class="team-card hover-shadow">
-                    <div class="profile-pic">
-                        <img src="danilo.jpg" alt="Foto de Pessoa 3" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <div class="team-name">Danilo Oliveira</div>
-                    <div class="team-description">
-                        <p>Pós gradudo em Ciência de Dados é especialista em traqueamento, dataLayer, GTM e desenvolvimento de sites. Gosta de maratonar séries.
-                        </p>
-                    </div>
-                    <a href="https://www.linkedin.com/in/danilosoliveira/" target="_blank" class="linkedin-button transition-all">LinkedIn</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contato -->
-        <section id="contato" class="py-20 bg-dark text-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-8 text-brand">Transforme Dados em Insights!</h2>
-                <p class="text-gray-300 mb-8">
-                    Entre em contato conosco e descubra como podemos ajudar sua empresa
-                    a tomar melhores decisões baseadas em dados.
-                </p>
-                <a href="https://wa.me/5511958342100?text="
-                    class="inline-flex items-center gap-2 btn-brand text-black px-8 py-3 rounded-lg font-semibold transition-all">
-                    Iniciar Conversa
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </a>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-black text-white py-8">
-            <div class="container mx-auto px-6 text-center">
-                <p>© <span id="year"></span> Tracking Code. Todos os direitos reservados.</p>
-            </div>
-        </footer>
-    </div>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="https://wa.me/5511958342100?text=" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
-      z-index:1000;" target="_blank">
-    <i style="margin-top:16px" class="fa fa-whatsapp"></i>
-    </a>
+            <button id="menu-btn">&#9776;</button>
+            <ul id="menu">
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuBtn = document.getElementById('menu-btn');
+            const menu = document.getElementById('menu');
+            menuBtn.addEventListener('click', function () {
+                menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+            });
+        });
     </script>
 </body>
 </html>
