@@ -118,79 +118,42 @@ document.getElementById('menu-btn').addEventListener('click', function () {
         .linkedin-button:hover {
             opacity: 0.9;
         }
-        @media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Organiza os itens verticalmente no mobile */
-        align-items: flex-start; /* Alinha o conteúdo à esquerda */
-    }
-
-    /* Logo redimensionado no mobile */
-    nav > div {
-        width: 100px; /* Reduz tamanho do logo */
-        height: 100px;
-    }
-
-    /* Ocultar menu no mobile inicialmente */
-    #menu {
-        display: none;
-        flex-direction: column; /* Alinha itens verticalmente no mobile */
-        width: 100%; /* Menu ocupa toda a largura */
-        background-color: white; /* Cor de fundo para contraste */
-        padding: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        position: absolute; /* Menu sobreposto */
-        top: 100px; /* Abaixo do logo */
-        left: 0;
-    }
-
-    #menu li {
-        margin: 10px 0; /* Espaçamento entre itens no mobile */
-    }
-
-    /* Exibe botão do menu hambúrguer */
-    #menu-btn {
-        display: block;
-    }
-}
 @media (max-width: 768px) {
     nav {
         flex-direction: column; /* Organiza os itens verticalmente no mobile */
         align-items: flex-start; /* Alinha o conteúdo à esquerda */
     }
 
-    /* Logo redimensionado no mobile */
+    /* Redimensiona o logo no mobile */
     nav > div {
-        width: 100px; /* Reduz tamanho do logo */
+        width: 100px;
         height: 100px;
     }
 
-    /* Ocultar menu no mobile inicialmente */
-    #menu {
-        display: none;
-        flex-direction: column; /* Alinha itens verticalmente no mobile */
-        width: 100%; /* Menu ocupa toda a largura */
-        background-color: linear-gradient(to right, var(--dark-bg), var(--purple));
-        padding: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        position: absolute; /* Menu sobreposto */
-        top: 100px; /* Abaixo do logo */
-        left: 0;
-    }
-
-    #menu li {
-        margin: 10px 0; /* Espaçamento entre itens no mobile */
-    }
-
-    /* Exibe botão do menu hambúrguer somente no mobile */
+    /* Exibe o botão do menu hambúrguer no mobile */
     #menu-btn {
         display: block;
     }
+
+    /* Oculta o menu inicialmente no mobile */
+    #menu {
+        display: none; /* Oculta o menu por padrão */
+        flex-direction: column; /* Itens empilhados no mobile */
+        width: 100%; /* O menu ocupa a largura completa */
+        background-color: white; /* Fundo para contraste */
+        position: absolute; /* Fica sobreposto ao conteúdo */
+        top: 120px; /* Alinha abaixo do logo */
+        left: 0;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilo dos itens do menu no mobile */
+    #menu li {
+        margin: 10px 0; /* Espaçamento entre itens no menu vertical */
+    }
 }
 
-/* No desktop, o menu e o botão do menu hambúrguer */
-#menu-btn {
-    display: none; /* Oculta o botão do menu hambúrguer no desktop */
-}
     </style>
 </head>
 <body>
