@@ -8,7 +8,11 @@
         <script>
 document.getElementById('menu-btn').addEventListener('click', function () {
     const menu = document.getElementById('menu');
-    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none'; // Oculta o menu
+    } else {
+        menu.style.display = 'flex'; // Exibe o menu
+    }
 });
     </script>
     <style>
@@ -118,6 +122,14 @@ document.getElementById('menu-btn').addEventListener('click', function () {
         .linkedin-button:hover {
             opacity: 0.9;
         }
+#menu-btn {
+    display: none; /* Oculta o botão do menu hambúrguer no desktop */
+}
+
+#menu {
+    display: flex; /* Exibe o menu horizontalmente no desktop */
+}
+        
 @media (max-width: 768px) {
     nav {
         flex-direction: column; /* Organiza os itens verticalmente no mobile */
