@@ -124,84 +124,62 @@
     <div class="min-h-screen">
         <!-- Hero Section -->
  <header class="hero-gradient text-white">
-    <nav class="container mx-auto p-6 flex justify-between items-center">
-        <h1 class="text-2xl font-bold">Tracking Code</h1>
-        <!-- Menu Hambúrguer -->
-        <div class="block lg:hidden">
-            <button id="menu-toggle" class="text-white focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 6h18M3 12h18M3 18h18"></path>
-                </svg>
-            </button>
-        </div>
+  <nav class="container mx-auto p-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Tracking Code</h1>
+    
+    <!-- Menu Hambúrguer -->
+    <button id="hamburger" class="lg:hidden flex items-center gap-2 px-4 py-2 text-black rounded-lg hover:opacity-90 transition-all">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 6h18M3 12h18M3 18h18"></path>
+      </svg>
+    </button>
 
-        <!-- Links de Navegação -->
-        <div id="menu" class="hidden lg:flex items-center gap-4">
-            <a href="https://www.linkedin.com/company/tracking-code" target="_blank" rel="noopener noreferrer"
-                class="flex items-center gap-2 px-4 py-2 btn-brand text-black rounded-lg hover:opacity-90 transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                    <rect x="2" y="9" width="4" height="12"></rect>
-                    <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-                LinkedIn
-            </a>
-            <a href="https://www.instagram.com/tracking.code" target="_blank" rel="noopener noreferrer"
-                class="flex items-center gap-2 px-4 py-2 btn-brand text-black rounded-lg hover:opacity-90 transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-                </svg>
-                Instagram
-            </a>
-        </div>
-    </nav>
-
-    <!-- Menu Expandido para Mobile -->
-    <div id="mobile-menu" class="lg:hidden">
-        <div class="flex flex-col items-center gap-4 py-4">
-            <a href="https://www.linkedin.com/company/tracking-code" target="_blank" rel="noopener noreferrer"
-                class="flex items-center gap-2 px-4 py-2 btn-brand text-black rounded-lg hover:opacity-90 transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                    <rect x="2" y="9" width="4" height="12"></rect>
-                    <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-                LinkedIn
-            </a>
-            <a href="https://www.instagram.com/tracking.code" target="_blank" rel="noopener noreferrer"
-                class="flex items-center gap-2 px-4 py-2 btn-brand text-black rounded-lg hover:opacity-90 transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-                </svg>
-                Instagram
-            </a>
-        </div>
+    <!-- Menu no Desktop -->
+    <div class="hidden lg:flex gap-4">
+      <a href="https://www.linkedin.com/company/tracking-code" target="_blank" rel="noopener noreferrer"
+         class="flex items-center gap-2 px-4 py-2 btn-brand text-black rounded-lg hover:opacity-90 transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+        LinkedIn
+      </a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"
+         class="flex items-center gap-2 px-4 py-2 btn-brand text-black rounded-lg hover:opacity-90 transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v2h2zm0 4h-2v6h2zm-6-4H7v2h2zm0 4H7v6h2z"></path>
+        </svg>
+        Instagram
+      </a>
     </div>
 
-    <div class="container mx-auto px-6 py-20">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">
-            Transformando Dados em Decisões Inteligentes
-        </h2>
-        <p class="text-xl mb-8 max-w-2xl">
-            Precisa otimizar seus dados e escalar seus resultados? Somos especialistas em Digital Analytics, prontos para transformar desafios em soluções!
-        </p>
-        <a href="https://wa.me/5511958342100?text="
-            class="inline-flex items-center gap-2 btn-brand text-black px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all">
-            Fale Conosco
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-        </a>
+    <!-- Menu no Mobile -->
+    <div id="menu" class="lg:hidden hidden w-full mt-4 p-4 bg-white rounded-lg shadow-md">
+      <a href="https://www.linkedin.com/company/tracking-code" target="_blank" rel="noopener noreferrer" 
+         class="block px-4 py-2 text-black hover:bg-gray-200 rounded-lg transition-all">LinkedIn</a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" 
+         class="block px-4 py-2 text-black hover:bg-gray-200 rounded-lg transition-all">Instagram</a>
     </div>
+  </nav>
+  <div class="container mx-auto px-6 py-20">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+      Transformando Dados em Decisões Inteligentes
+    </h2>
+    <p class="text-xl mb-8 max-w-2xl">
+      Precisa otimizar seus dados e escalar seus resultados? Somos especialistas em Digital Analytics, prontos para transformar desafios em soluções!
+    </p>
+    <a href="https://wa.me/5511958342100?text="
+       class="inline-flex items-center gap-2 btn-brand text-black px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all">
+      Fale Conosco
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </a>
+  </div>
 </header>
         <!-- Serviços -->
         <section class="py-20 bg-dark text-white">
@@ -415,16 +393,13 @@ Precisa revisar os dados que está recebendo? Acha que as informações estão i
         <div class="container mx-auto px-6 text-center">
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-            <script>
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const desktopMenu = document.getElementById("menu");
+ <script>
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
 
-    menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-        desktopMenu.classList.add("hidden");
-    });
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("hidden");  // Alterna a visibilidade
+  });
 </script>
 </body>
 </html>
